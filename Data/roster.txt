@@ -1,0 +1,100 @@
+Argentina	Pablo Prigioni	Los Angeles Clippers
+Argentina	Manu Ginobili	San Antonio Spurs
+Argentina	Luis Scola	Toronto Raptors
+Australia	Cameron Bairstow	Chicago Bulls
+Australia	Matthew Dellavedova	Cleveland Cavaliers
+Australia	Kyrie Irving	Cleveland Cavaliers
+Australia	Aron Baynes	Detroit Pistons
+Australia	Andrew Bogut	Golden State Warriors
+Australia	Patty Mills	San Antonio Spurs
+Australia	Dante Exum	Utah Jazz
+Australia	Joe Ingles	Utah Jazz
+Bosnia and Herzegovina	Jusuf Nurkic	Denver Nuggets
+Bosnia and Herzegovina	Mirza Teletovic	Phoenix Suns
+Brazil	Tiago Splitter	Atlanta Hawks
+Brazil	Cristiano Felicio	Chicago Bulls
+Brazil	Anderson Varejao	Cleveland Cavaliers
+Brazil	Leandro Barbosa	Golden State Warriors
+Brazil	Marcelo Huertas	Los Angeles Lakers
+Brazil	Bruno Caboclo	Toronto Raptors
+Brazil	Lucas Nogueira	Toronto Raptors
+Brazil	Raul Neto	Utah Jazz
+Brazil	Nene	Washington Wizards
+Cameroon	Luc Mbah a Moute	Los Angeles Clippers
+Cameroon	Joel Embiid	Philadelphia 76ers
+Canada	Kelly Olynyk	Boston Celtics
+Canada	Tristan Thompson	Cleveland Cavaliers
+Canada	Dwight Powell	Dallas Mavericks
+Canada	Joel Anthony	Detroit Pistons
+Canada	Robert Sacre	Los Angeles Lakers
+Canada	Tyler Ennis	Milwaukee Bucks
+Canada	Andrew Wiggins	Minnesota Timberwolves
+Canada	Andrew Nicholson	Orlando Magic
+Canada	Nik Stauskas	Philadelphia 76ers
+Canada	Anthony Bennett	Toronto Raptors
+Canada	Cory Joseph	Toronto Raptors
+Canada	Trey Lyles	Utah Jazz
+Cape Verde	Walter Tavares	Atlanta Hawks
+Congo	Serge Ibaka	Oklahoma City Thunder
+Croatia	Bojan Bogdanovic	Brooklyn Nets
+Croatia	Damjan Rudez	Minnesota Timberwolves
+Croatia	Mario Hezonja	Orlando Magic
+Croatia	Duje Dukan	Sacramento Kings
+Democratic Republic of the Congo	Emmanuel Mudiay	Denver Nuggets
+Democratic Republic of the Congo	Bismack Biyombo	Toronto Raptors
+Dominican Republic	Al Horford	Atlanta Hawks
+Dominican Republic	Luis Montero	Portland Trail Blazers
+France	Nicolas Batum	Charlotte Hornets
+France	Joffrey Lauvergne	Denver Nuggets
+France	Ian Mahinmi	Indiana Pacers
+France	Damien Inglis	Milwaukee Bucks
+France	Alexis Ajinca	New Orleans Pelicans
+France	Kevin Seraphin	New York Knicks
+France	Evan Fournier	Orlando Magic
+France	Boris Diaw	San Antonio Spurs
+France	Tony Parker	San Antonio Spurs
+France	Rudy Gobert	Utah Jazz
+Georgia	Zaza Pachulia	Dallas Mavericks
+Germany	Dennis Schroder	Atlanta Hawks
+Germany	Dirk Nowitzki	Dallas Mavericks
+Germany	Tibor Pleiss	Utah Jazz
+Greece	Giannis Antetokounmpo	Milwaukee Bucks
+Israel	Omri Casspi	Sacramento Kings
+Italy	Andrea Bargnani	Brooklyn Nets
+Italy	Danilo Gallinari	Denver Nuggets
+Italy	Marco Belinelli	Sacramento Kings
+Latvia	Kristaps Porzingis	New York Knicks
+Lithuania	Donatas Motiejunas	Houston Rockets
+Lithuania	Jonas Valanciunas	Toronto Raptors
+Montenegro	Nikola Mirotic	Chicago Bulls
+Montenegro	Nikola Pekovic	Minnesota Timberwolves
+Montenegro	Nikola Vucevic	Orlando Magic
+New Zealand	Steven Adams	Oklahoma City Thunder
+Nigeria	Festus Ezeli	Golden State Warriors
+Poland	Marcin Gortat	Washington Wizards
+Puerto Rico	J.J. Barea	Dallas Mavericks
+Russia	Sergey Karasev	Brooklyn Nets
+Russia	Sasha Kaun	Cleveland Cavaliers
+Russia	Timofey Mozgov	Cleveland Cavaliers
+Senegal	Gorgui Dieng	Minnesota Timberwolves
+Serbia	Nikola Jokic	Denver Nuggets
+Serbia	Nemanja Bjelica	Minnesota Timberwolves
+Serbia	Boban Marjanovic	San Antonio Spurs
+Slovenia	Beno Udrih	Memphis Grizzlies
+Slovenia	Goran Dragic	Miami Heat
+Slovenia	Sasha Vujacic	New York Knicks
+South Sudan	Luol Deng	Miami Heat
+Spain	Pau Gasol	Chicago Bulls
+Spain	Marc Gasol	Memphis Grizzlies
+Spain	Ricky Rubio	Minnesota Timberwolves
+Spain	Jose Calderon	New York Knicks
+Sweden	Jonas Jerebko	Boston Celtics
+Switzerland	Thabo Sefolosha	Atlanta Hawks
+Switzerland	Clint Capela	Houston Rockets
+Tunisia	Salah Mejri	Dallas Mavericks
+Turkey	Ersan Ilyasova	Detroit Pistons
+Turkey	Omer Asik	New Orleans Pelicans
+Turkey	Enes Kanter	Oklahoma City Thunder
+Ukraine	Alex Len	Phoenix Suns
+US Virgin Islands	Tim Duncan	San Antonio Spurs
+Venezuela	Greivis Vasquez	Milwaukee Bucks
