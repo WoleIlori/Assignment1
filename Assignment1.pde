@@ -12,6 +12,11 @@ void setup()
   ballY = height * 0.15f;
   top = ballY + ballRadius;
   left = width * 0.34f;
+  dirX = 5;
+  dirY = 3;
+  
+  println(ballX);
+  println(ballY);
 }
 
 //Declare Global Arraylists
@@ -24,9 +29,10 @@ float ballSize;
 float ballRadius;
 float ballX;
 float ballY;
-float xSpeed;
-float ySpeed;
+float dirX;
+float dirY;
 
+//variables for the base 
 float top;
 float left;
 
@@ -59,37 +65,53 @@ void loadData()
   }
 }
 
+float sBallX = 0;
+float sBallY = 330;
+float sBallSize = 30;
+float sBallRadius = 30 * 0.5f;
+
+
+
 void draw()
 {
   background(0);
   drawTrophy();
-  text("1.Display the rise of international players over the years", 20, 270); 
+  text("1.Display the rise of international players over the years",20, 270); 
   text("2.Display the amount international players currently playing", 20, 300);
+  ellipse(sBallX, sBallY, sBallSize, sBallSize);
+  
+  sBallX += dirX;
+  sBallY += dirY;
+  
+  if(sBallX > (width - sBallRadius))
+  {
+    sBallX = 0;
+    sBallY = 330;
+    dirY = -dirY;
+  }
+  
+  if(sBallY > height - sBallRadius)
+  {
+    dirY = - dirY;
+  }
+  
+  
+ 
+ /*
   if(toggled)
   {
     background(255);
     stroke(240, 85, 7);
     ellipse(ballX, ballY, ballSize, ballSize);
-    /*
-    line(ballX, ballY - ballRadius, ballX, ballY + ballRadius);
-    line(ballX - ballRadius, ballY, ballX + ballRadius, ballY);
-    */ 
     
-  }
-  /*
-  switch(mode)
-  {
-    case 1:
-    {
-      //changing direction after hitting right wall
-      if(ballX > width - ballRadius)
-      {
-        
-      
-    }
+    //line(ballX, ballY - ballRadius, ballX, ballY + ballRadius);
+    //line(ballX - ballRadius, ballY, ballX + ballRadius, ballY);
   }
   */
 }
+    
+
+
 
 void drawTrophy()
 {
