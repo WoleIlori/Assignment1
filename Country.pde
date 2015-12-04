@@ -1,13 +1,16 @@
 class Country
 {
-  String countryName;
+  String country;
   int noPlayers;
+  int countryIndex;
   
   Country(String lines)
   {
     String[] elements = lines.split("\t");
-    countryName = elements[0];
+    country = elements[0];
     noPlayers = Integer.parseInt(elements[1]);
+    countryIndex = Integer.parseInt(elements[2]);
   }
+  
 }
 

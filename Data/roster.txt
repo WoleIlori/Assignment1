@@ -1,100 +1,100 @@
-Argentina	Pablo Prigioni	Los Angeles Clippers
-Argentina	Manu Ginobili	San Antonio Spurs
-Argentina	Luis Scola	Toronto Raptors
-Australia	Cameron Bairstow	Chicago Bulls
-Australia	Matthew Dellavedova	Cleveland Cavaliers
-Australia	Kyrie Irving	Cleveland Cavaliers
-Australia	Aron Baynes	Detroit Pistons
-Australia	Andrew Bogut	Golden State Warriors
-Australia	Patty Mills	San Antonio Spurs
-Australia	Dante Exum	Utah Jazz
-Australia	Joe Ingles	Utah Jazz
-Bosnia and Herzegovina	Jusuf Nurkic	Denver Nuggets
-Bosnia and Herzegovina	Mirza Teletovic	Phoenix Suns
-Brazil	Tiago Splitter	Atlanta Hawks
-Brazil	Cristiano Felicio	Chicago Bulls
-Brazil	Anderson Varejao	Cleveland Cavaliers
-Brazil	Leandro Barbosa	Golden State Warriors
-Brazil	Marcelo Huertas	Los Angeles Lakers
-Brazil	Bruno Caboclo	Toronto Raptors
-Brazil	Lucas Nogueira	Toronto Raptors
-Brazil	Raul Neto	Utah Jazz
-Brazil	Nene	Washington Wizards
-Cameroon	Luc Mbah a Moute	Los Angeles Clippers
-Cameroon	Joel Embiid	Philadelphia 76ers
-Canada	Kelly Olynyk	Boston Celtics
-Canada	Tristan Thompson	Cleveland Cavaliers
-Canada	Dwight Powell	Dallas Mavericks
-Canada	Joel Anthony	Detroit Pistons
-Canada	Robert Sacre	Los Angeles Lakers
-Canada	Tyler Ennis	Milwaukee Bucks
-Canada	Andrew Wiggins	Minnesota Timberwolves
-Canada	Andrew Nicholson	Orlando Magic
-Canada	Nik Stauskas	Philadelphia 76ers
-Canada	Anthony Bennett	Toronto Raptors
-Canada	Cory Joseph	Toronto Raptors
-Canada	Trey Lyles	Utah Jazz
-Cape Verde	Walter Tavares	Atlanta Hawks
-Congo	Serge Ibaka	Oklahoma City Thunder
-Croatia	Bojan Bogdanovic	Brooklyn Nets
-Croatia	Damjan Rudez	Minnesota Timberwolves
-Croatia	Mario Hezonja	Orlando Magic
-Croatia	Duje Dukan	Sacramento Kings
-Democratic Republic of the Congo	Emmanuel Mudiay	Denver Nuggets
-Democratic Republic of the Congo	Bismack Biyombo	Toronto Raptors
-Dominican Republic	Al Horford	Atlanta Hawks
-Dominican Republic	Luis Montero	Portland Trail Blazers
-France	Nicolas Batum	Charlotte Hornets
-France	Joffrey Lauvergne	Denver Nuggets
-France	Ian Mahinmi	Indiana Pacers
-France	Damien Inglis	Milwaukee Bucks
-France	Alexis Ajinca	New Orleans Pelicans
-France	Kevin Seraphin	New York Knicks
-France	Evan Fournier	Orlando Magic
-France	Boris Diaw	San Antonio Spurs
-France	Tony Parker	San Antonio Spurs
-France	Rudy Gobert	Utah Jazz
-Georgia	Zaza Pachulia	Dallas Mavericks
-Germany	Dennis Schroder	Atlanta Hawks
-Germany	Dirk Nowitzki	Dallas Mavericks
-Germany	Tibor Pleiss	Utah Jazz
-Greece	Giannis Antetokounmpo	Milwaukee Bucks
-Israel	Omri Casspi	Sacramento Kings
-Italy	Andrea Bargnani	Brooklyn Nets
-Italy	Danilo Gallinari	Denver Nuggets
-Italy	Marco Belinelli	Sacramento Kings
-Latvia	Kristaps Porzingis	New York Knicks
-Lithuania	Donatas Motiejunas	Houston Rockets
-Lithuania	Jonas Valanciunas	Toronto Raptors
-Montenegro	Nikola Mirotic	Chicago Bulls
-Montenegro	Nikola Pekovic	Minnesota Timberwolves
-Montenegro	Nikola Vucevic	Orlando Magic
-New Zealand	Steven Adams	Oklahoma City Thunder
-Nigeria	Festus Ezeli	Golden State Warriors
-Poland	Marcin Gortat	Washington Wizards
-Puerto Rico	J.J. Barea	Dallas Mavericks
-Russia	Sergey Karasev	Brooklyn Nets
-Russia	Sasha Kaun	Cleveland Cavaliers
-Russia	Timofey Mozgov	Cleveland Cavaliers
-Senegal	Gorgui Dieng	Minnesota Timberwolves
-Serbia	Nikola Jokic	Denver Nuggets
-Serbia	Nemanja Bjelica	Minnesota Timberwolves
-Serbia	Boban Marjanovic	San Antonio Spurs
-Slovenia	Beno Udrih	Memphis Grizzlies
-Slovenia	Goran Dragic	Miami Heat
-Slovenia	Sasha Vujacic	New York Knicks
-South Sudan	Luol Deng	Miami Heat
-Spain	Pau Gasol	Chicago Bulls
-Spain	Marc Gasol	Memphis Grizzlies
-Spain	Ricky Rubio	Minnesota Timberwolves
-Spain	Jose Calderon	New York Knicks
-Sweden	Jonas Jerebko	Boston Celtics
-Switzerland	Thabo Sefolosha	Atlanta Hawks
-Switzerland	Clint Capela	Houston Rockets
-Tunisia	Salah Mejri	Dallas Mavericks
-Turkey	Ersan Ilyasova	Detroit Pistons
-Turkey	Omer Asik	New Orleans Pelicans
-Turkey	Enes Kanter	Oklahoma City Thunder
-Ukraine	Alex Len	Phoenix Suns
-US Virgin Islands	Tim Duncan	San Antonio Spurs
-Venezuela	Greivis Vasquez	Milwaukee Bucks
+0	Argentina	Pablo Prigioni	Los Angeles Clippers 
+0	Argentina	Manu Ginobili	San Antonio Spurs
+0	Argentina	Luis Scola	Toronto Raptors
+1	Australia	Cameron Bairstow	Chicago Bulls
+1	Australia	Matthew Dellavedova	Cleveland Cavaliers
+1	Australia	Kyrie Irving	Cleveland Cavaliers
+1	Australia	Aron Baynes	Detroit Pistons
+1	Australia	Andrew Bogut	Golden State Warriors
+1	Australia	Patty Mills	San Antonio Spurs
+1	Australia	Dante Exum	Utah Jazz
+1	Australia	Joe Ingles	Utah Jazz
+2	Bosnia and Herzegovina	Jusuf Nurkic	Denver Nuggets
+2	Bosnia and Herzegovina	Mirza Teletovic	Phoenix Suns
+3	Brazil	Tiago Splitter	Atlanta Hawks
+3	Brazil	Cristiano Felicio	Chicago Bulls
+3	Brazil	Anderson Varejao	Cleveland Cavaliers
+3	Brazil	Leandro Barbosa	Golden State Warriors
+3	Brazil	Marcelo Huertas	Los Angeles Lakers
+3	Brazil	Bruno Caboclo	Toronto Raptors
+3	Brazil	Lucas Nogueira	Toronto Raptors
+3	Brazil	Raul Neto	Utah Jazz
+3	Brazil	Nene	Washington Wizards
+4	Cameroon	Luc Mbah a Moute	Los Angeles Clippers
+4	Cameroon	Joel Embiid	Philadelphia 76ers
+5	Canada	Kelly Olynyk	Boston Celtics
+5	Canada	Tristan Thompson	Cleveland Cavaliers
+5	Canada	Dwight Powell	Dallas Mavericks
+5	Canada	Joel Anthony	Detroit Pistons
+5	Canada	Robert Sacre	Los Angeles Lakers
+5	Canada	Tyler Ennis	Milwaukee Bucks
+5	Canada	Andrew Wiggins	Minnesota Timberwolves
+5	Canada	Andrew Nicholson	Orlando Magic
+5	Canada	Nik Stauskas	Philadelphia 76ers
+5	Canada	Anthony Bennett	Toronto Raptors
+5	Canada	Cory Joseph	Toronto Raptors
+5	Canada	Trey Lyles	Utah Jazz
+6	Cape Verde	Walter Tavares	Atlanta Hawks
+7	Congo	Serge Ibaka	Oklahoma City Thunder
+8	Croatia	Bojan Bogdanovic	Brooklyn Nets
+8	Croatia	Damjan Rudez	Minnesota Timberwolves
+8	Croatia	Mario Hezonja	Orlando Magic
+8	Croatia	Duje Dukan	Sacramento Kings
+9	Democratic Republic of the Congo	Emmanuel Mudiay	Denver Nuggets
+9	Democratic Republic of the Congo	Bismack Biyombo	Toronto Raptors
+10	Dominican Republic	Al Horford	Atlanta Hawks
+10	Dominican Republic	Luis Montero	Portland Trail Blazers
+11	France	Nicolas Batum	Charlotte Hornets
+11	France	Joffrey Lauvergne	Denver Nuggets
+11	France	Ian Mahinmi	Indiana Pacers
+11	France	Damien Inglis	Milwaukee Bucks
+11	France	Alexis Ajinca	New Orleans Pelicans
+11	France	Kevin Seraphin	New York Knicks
+11	France	Evan Fournier	Orlando Magic
+11	France	Boris Diaw	San Antonio Spurs
+11	France	Tony Parker	San Antonio Spurs
+11	France	Rudy Gobert	Utah Jazz
+12	Georgia	Zaza Pachulia	Dallas Mavericks
+13	Germany	Dennis Schroder	Atlanta Hawks
+13	Germany	Dirk Nowitzki	Dallas Mavericks
+13	Germany	Tibor Pleiss	Utah Jazz
+14	Greece	Giannis Antetokounmpo	Milwaukee Bucks
+15	Israel	Omri Casspi	Sacramento Kings
+16	Italy	Andrea Bargnani	Brooklyn Nets
+16	Italy	Danilo Gallinari	Denver Nuggets
+16	Italy	Marco Belinelli	Sacramento Kings
+17	Latvia	Kristaps Porzingis	New York Knicks
+18	Lithuania	Donatas Motiejunas	Houston Rockets
+18	Lithuania	Jonas Valanciunas	Toronto Raptors
+19	Montenegro	Nikola Mirotic	Chicago Bulls
+19	Montenegro	Nikola Pekovic	Minnesota Timberwolves
+19	Montenegro	Nikola Vucevic	Orlando Magic
+20	New Zealand	Steven Adams	Oklahoma City Thunder
+21	Nigeria	Festus Ezeli	Golden State Warriors
+22	Poland	Marcin Gortat	Washington Wizards
+23	Puerto Rico	J.J. Barea	Dallas Mavericks
+24	Russia	Sergey Karasev	Brooklyn Nets
+24	Russia	Sasha Kaun	Cleveland Cavaliers
+24	Russia	Timofey Mozgov	Cleveland Cavaliers
+25	Senegal	Gorgui Dieng	Minnesota Timberwolves
+26	Serbia	Nikola Jokic	Denver Nuggets
+26	Serbia	Nemanja Bjelica	Minnesota Timberwolves
+26	Serbia	Boban Marjanovic	San Antonio Spurs
+27	Slovenia	Beno Udrih	Memphis Grizzlies
+27	Slovenia	Goran Dragic	Miami Heat
+27	Slovenia	Sasha Vujacic	New York Knicks
+28	South Sudan	Luol Deng	Miami Heat
+29	Spain	Pau Gasol	Chicago Bulls
+29	Spain	Marc Gasol	Memphis Grizzlies
+29	Spain	Ricky Rubio	Minnesota Timberwolves
+29	Spain	Jose Calderon	New York Knicks
+30	Sweden	Jonas Jerebko	Boston Celtics
+31	Switzerland	Thabo Sefolosha	Atlanta Hawks
+31	Switzerland	Clint Capela	Houston Rockets
+32	Tunisia	Salah Mejri	Dallas Mavericks
+33	Turkey	Ersan Ilyasova	Detroit Pistons
+33	Turkey	Omer Asik	New Orleans Pelicans
+33	Turkey	Enes Kanter	Oklahoma City Thunder
+34	Ukraine	Alex Len	Phoenix Suns
+35	US Virgin Islands	Tim Duncan	San Antonio Spurs
+36	Venezuela	Greivis Vasquez	Milwaukee Bucks

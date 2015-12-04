@@ -1,5 +1,6 @@
 class Player
 {
+  int countryIndex;
   String country;
   String playerName;
   String team;
@@ -7,8 +8,10 @@ class Player
   Player(String list)
   {
     String[] elements = list.split("\t");
-    country = elements[0];
-    playerName = elements[1];
-    team = elements[2];
+    countryIndex = Integer.parseInt(elements[0]);
+    country = elements[1];
+    playerName = elements[2];
+    team = elements[3];
   }
+  
 }
