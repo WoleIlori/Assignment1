@@ -3,14 +3,16 @@ void setup()
   size(500, 500);
   background(0);
   stroke(255);
+  mode = 0;
   centX = width / 2;
   centY = height / 2;
   ballIndex = 0;
   check = 0;
   toggled = false;
   animate = false;
+  pieError = 1;
   border = width * 0.1f; 
-  windowRange = width - (border * 2.0f);  
+  windowRange = width - (border * 2.0f);
   loadData();
   sumPlayers();
   maxIndex();
@@ -24,16 +26,18 @@ ArrayList<Ball> balls = new ArrayList<Ball>();
 
 
 
-
+//global variables
 boolean toggled;
 boolean animate;
-int mode = 1;
+int pieError;
+int mode;
 float centX, centY; 
 int storeIndex = 0;
 int ballIndex;
 int check;
 float border;
 float windowRange;
+
 
 void loadData()
 {
@@ -45,6 +49,7 @@ void loadData()
   {
     Country country = new Country(no_lines[i]);
     countries.add(country);
+    
   }
   
   for(int i = 0; i < lists.length; i++)
@@ -93,63 +98,85 @@ void draw()
   float lineWidth = width / data.size();
   switch(mode)
   {
+    case 0:
+    {
+       Ball option1 = new Ball(20, 40, color(240, 85, 7));
+       Ball option2 = new Ball(20, 120, color(240, 85, 7));
+       option1.ballSize = 15.0f;
+       option2.ballSize = 15.0f;
+       option1.render();
+       option2.render();
+       fill(255);
+       textSize(12);
+       textAlign(LEFT);
+       text("1. Display the influence on international countries", 45, 47.5);
+       text("2. Display the countries and players currently playing", 40, 127.5);
+      break;
+    }
     case 1:
     { 
-      check = 1;
-      if(animate)
+      if(pieError == 1)
       {
-        drawAxis(11, 110);
-        for(int i = 0; i < data.size() - 1; i ++)
+        check = 1;
+        if(animate)
         {
-          float linex1 = map(i, 0, data.size(), border, border + windowRange);
-          float linex2 = map(i + 1, 0, data.size(), border, border + windowRange);
-          float liney1 = map(data.get(i).noPlayer, 0, 110, height - border, (height - border) - windowRange);
-          float liney2 = map(data.get(i + 1).noPlayer, 0, 110, height - border, (height - border) - windowRange);
-          line(linex1, liney1, linex2, liney2);
-        }
+          //drawing the trendline graph
+          drawAxis(11, 110);
+          drawTrendLine();
+    
+          for(int i = 0; i < data.size(); i ++)
+          {
+            balls.get(i).render();
         
-        for(int i = 0; i < data.size(); i ++)
-        {
-          balls.get(i).render();
-      
-          if(i == ballIndex)
-          {
-            balls.get(i).c = 255;
-            println(balls.get(i).pos.y, i);
-          }
-          else
-          {
-            balls.get(i).c = color (240, 85, 7) ;
-          }
+            if(i == ballIndex)
+            {
+              balls.get(i).c = color(random(0,255));
+              balls.get(i).update();
+           
+              if((balls.get(i).pos.y + balls.get(i).ballRadius) > (height - border))
+              {
+                balls.get(i).pos.y = ((height - border) - balls.get(i).ballRadius);
+                balls.get(i).ySpeed = - balls.get(i).ySpeed * 0.9f;
+                
+              }
+              
+              if((balls.get(i).pos.y < balls.get(i).ballRadius)  )
+              {
+                balls.get(i).ySpeed = - balls.get(i).ySpeed ;
+              }
+              println(balls.get(i).ySpeed, i);
+            }
+            else
+            {
+              balls.get(i).c = color (240, 85, 7) ;
+              
+            }
+
+            
+            
+          }//end for
           
-        }//end first for
-        
-      }
-      else
-      {
-        drawAxis(11, 110);
-        
-        for(int i = 0; i < data.size() - 1; i ++)
-        {
-          float x1 = map(i, 0, data.size(), border, border + windowRange);
-          float x2 = map(i + 1, 0, data.size(), border, border + windowRange);
-          float y1 = map(data.get(i).noPlayer, 0, 110, height - border, (height - border) - windowRange);
-          float y2 = map(data.get(i + 1).noPlayer, 0, 110, height - border, (height - border) - windowRange);
-          line(x1, y1, x2, y2);
         }
-        
-        for(int i = 0; i < data.size(); i ++)
+        else
         {
-          float ballX = map(i, 0, data.size(), border, border + windowRange);
-          float ballY = map(data.get(i).noPlayer, 0, 110, height - border, (height - border) - windowRange);
-          Ball ball = new Ball(ballX, ballY, color(240, 85, 7));
-          balls.add(ball);
-          balls.get(i).render();
-        }
+          drawAxis(11, 110);
+          //drawing the trendline graph
+          drawTrendLine();
+          
+          //drawing a ball on each point 
+          for(int i = 0; i < data.size(); i ++)
+          {
+            float ballX = map(i, 0, data.size(), border, border + windowRange);
+            float ballY = map(data.get(i).noPlayer, 0, 110, height - border, (height - border) - windowRange);
+            Ball ball = new Ball(ballX, ballY, color(240, 85, 7));
+            balls.add(ball);
+            balls.get(i).render();
+          }
+          balls.get(ballIndex).pos.y = map(data.get(ballIndex).noPlayer, 0, 110, height - border, (height - border) - windowRange);
+          
+        }//end else
         
-        balls.get(ballIndex).c = color(240, 85, 7) ;
-      }//end else
-       
+      }//end 
       break;
     }
     
@@ -159,23 +186,41 @@ void draw()
       if(toggled)
       {
          println("Yoohooooo");
+         
+         //displays the names of players from the chosen country
          displayPlayer(storeIndex);
+         
+         //prevents the user from going to case 1 from displayPlayer()
+         pieError = 0;
       }
       else
       {
-        
         float sum = sumPlayers(); 
         int maxIndex = maxIndex();
         
         //call drawPieChart()
         drawPieChart(sum, maxIndex);
-        break;
+        pieError = 1;
       }
-        
+      break;  
     }
     
   }//end switch
   
+}//end draw()
+
+
+
+void drawTrendLine()
+{
+   for(int i = 0; i < data.size() - 1; i ++)
+   {
+     float x1 = map(i, 0, data.size(), border, border + windowRange);
+     float x2 = map(i + 1, 0, data.size(), border, border + windowRange);
+     float y1 = map(data.get(i).noPlayer, 0, 110, height - border, (height - border) - windowRange);
+     float y2 = map(data.get(i + 1).noPlayer, 0, 110, height - border, (height - border) - windowRange);
+     line(x1, y1, x2, y2);
+   }
 }
 
 void drawAxis(int verticalIntervals, float vertDataRange)
@@ -192,7 +237,7 @@ void drawAxis(int verticalIntervals, float vertDataRange)
     
   for (int i = 0 ; i < data.size() ; i ++)
   {   
-   // Draw the ticks
+   // Drawing the ticks
    float axisX = (border - 13) + (i * horizInterval);
    line(axisX, height - (border - tickSize), axisX, (height - border));
    float TextY = height - (border * 0.5f);
@@ -219,8 +264,10 @@ void drawAxis(int verticalIntervals, float vertDataRange)
   }
 }
 
+
 void displayPlayer(int coIndex)
-{  
+{
+  fill(255);
   float textY = 20.0f;
   textAlign(LEFT, TOP);
   text("Country", 0, 20);
@@ -246,7 +293,8 @@ void drawPieChart(float sum, int maxIndex)
   float radius = centX ;
   float toMouseX = mouseX - radius;
   float toMouseY = mouseY - radius;  
-  float angle = atan2(toMouseY, toMouseX);  
+  float angle = atan2(toMouseY, toMouseX);
+  float max = countries.get(maxIndex).noPlayers;
   
   if (angle < 0)
   {
@@ -259,17 +307,16 @@ void drawPieChart(float sum, int maxIndex)
   
   // The cumulative sum of the dataset 
   float cumulative = 0;
-  
   for(int i = 0 ; i < countries.size() ; i ++)
   {
     cumulative += countries.get(i).noPlayers;
-    
+    float clr = map(countries.get(i).noPlayers, 0, max, 255, 100);
     // Calculating the current angle
     float current = map(cumulative, 0, sum, 0, TWO_PI);
     
     //Draw the pie segment
-    stroke(255);
-    fill(255);
+    stroke(0);
+    fill(100, clr, clr);// fill(clr, clr, clr);  fill(150,200,clr);
     
     float r = radius;
  
@@ -354,7 +401,7 @@ void mousePressed()
 
 void keyPressed()
 {
-  if (key >= '1' && key <='2')
+  if (key >= '0' && key <='2')
   {
     mode = key - '0';
   }
