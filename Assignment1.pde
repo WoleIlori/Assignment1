@@ -3,6 +3,7 @@ void setup()
   size(500, 500);
   background(0);
   stroke(255);
+  image = loadImage("basketball_menu.jpg");
   mode = 0;
   centX = width / 2;
   centY = height / 2;
@@ -15,6 +16,7 @@ void setup()
   loadData();
   sumPlayers();
   maxIndex();
+  //image(image, 0, 0, width, height);
 }
 
 //Declare Global Arraylists
@@ -26,6 +28,7 @@ ArrayList<Ball> balls = new ArrayList<Ball>();
 
 
 //global variables
+PImage image;
 boolean toggled;
 boolean bounceBall;
 int pieError;
@@ -87,35 +90,43 @@ int maxIndex()
       maxIndex = i;
     }
   }
-  println(maxPlayers, countries.get(maxIndex).country);
   return maxIndex;
 }
 
 void draw()
 {
-  background(0);
+  
   float lineWidth = width / data.size();
   switch(mode)
   {
     case 0:
     {
       //menu
+       image(image, 0, 0, width, height);
+       
        Ball option1 = new Ball(20, 40, color(240, 85, 7));
        Ball option2 = new Ball(20, 120, color(240, 85, 7));
+       
        option1.ballSize = 15.0f;
        option2.ballSize = 15.0f;
+       
        option1.render();
        option2.render();
+       
        fill(255);
        textSize(12);
        textAlign(LEFT);
-       text("Press 1 to display the influence on international countri", 45, 47.5);
+       
+       text("Press 1 to display the influence the NBA is having on other countries", 45, 47.5);
        text("Press 2 to Display the countries and players currently playing", 40, 127.5);
       break;
     }
     case 1:
     { 
+        image(image, 0, 0, width, height);
         check = 1;
+        
+        //if the boolean is true the ball would bounce 
         if(bounceBall)
         {
           //drawing the trendline graph
@@ -125,22 +136,18 @@ void draw()
           for(int i = 0; i < data.size(); i ++)
           {
             balls.get(i).render();
+            
             if(i == ballIndex)
             {
               balls.get(i).c = 255;
               balls.get(i).update();
-           
+              
+              //losing height after the ball hits the xaxis 
               if((balls.get(i).pos.y + balls.get(i).ballRadius) > (height - border))
               {
                 balls.get(i).pos.y = ((height - border) - balls.get(i).ballRadius);
                 balls.get(i).ySpeed = - balls.get(i).ySpeed * 0.9f;
               }
-              
-              if((balls.get(i).pos.y < balls.get(i).ballRadius))
-              {
-                balls.get(i).ySpeed = - balls.get(i).ySpeed ;
-              }
-              println(balls.get(i).ySpeed, i);
             }
             else
             {
@@ -153,7 +160,8 @@ void draw()
         else
         {
           drawAxis(11, 110);
-          //drawing the trendline graph
+          
+          //drawing the trend line
           drawTrendLine();
           
           //drawing a ball on each point 
@@ -165,6 +173,9 @@ void draw()
             balls.add(ball);
             balls.get(i).render();
           }
+          
+          //the ball returned to original position if boolean is false
+          balls.get(ballIndex).c = color (240, 85, 7) ;
           balls.get(ballIndex).pos.y = balls.get(ballIndex).prevPos;
           
         }//end else
@@ -173,11 +184,18 @@ void draw()
     
     case 2:
     {
+      background(0);
       check = 2;
+      
+      //ball placed to original position when option 2 is selected
+      bounceBall = false;
+      
       if(toggled)
       {
-         //displays the names of players from the chosen country
-         displayPlayer(storeIndex); 
+        image(image, 0, 0, width, height);
+        
+        //displays the names of players from the chosen country
+        displayPlayer(storeIndex); 
       }
       else
       {
@@ -215,7 +233,7 @@ void drawAxis(int verticalIntervals, float vertDataRange)
   float horizInterval =  windowRange / (data.size() - 1);
   float tickSize = border * 0.1f;
 
-  // Draw the horizontal azis  
+  // Draw the horizontal axis  
   line((border - 13), height - border, width - border, height - border);
     
   for (int i = 0 ; i < data.size() ; i ++)
@@ -257,6 +275,7 @@ void displayPlayer(int coIndex)
   text("Country", 0, 20);
   text("Name", 200, 20);
   text("Team", 350, 20);
+  
   for(int i = 0; i < players.size(); i ++)
   {
     if(players.get(i).countryIndex == coIndex)
@@ -291,16 +310,19 @@ void drawPieChart(float sum, int maxIndex)
   
   // The cumulative sum of the dataset 
   float cumulative = 0;
+  
   for(int i = 0 ; i < countries.size() ; i ++)
   {
     cumulative += countries.get(i).noPlayers;
+    
     float clr = map(countries.get(i).noPlayers, 0, max, 255, 100);
+    
     // Calculating the current angle
     float current = map(cumulative, 0, sum, 0, TWO_PI);
     
     //Draw the pie segment
     stroke(0);
-    fill(100, clr, clr);// fill(clr, clr, clr);  fill(150,200,clr);
+    fill(150, 200, clr);// fill(clr, clr, clr);  fill(150,200,clr);
     
     float r = radius;
  
@@ -361,7 +383,8 @@ void mousePressed()
     for(int i = 0 ; i < countries.size() ; i ++)
     {
       cumulative += countries.get(i).noPlayers;
-       // Calculate the current angle
+      
+      // Calculate the current angle
       float current = map(cumulative, 0, sum, 0, TWO_PI);
       
       // If the mouse angle is inside the pie segment
@@ -379,6 +402,7 @@ void mousePressed()
 
 void keyPressed()
 {
+  
   if(toggled == false)
   {
     if (key >= '0' && key <='2')

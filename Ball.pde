@@ -7,16 +7,6 @@ class Ball
   float ySpeed;
   color c;
   
-  //using default constructor
-  /*
-  Ball()
-  {
-    pos = new PVector(0, 0);
-    ballSize = 0.0f;
-    ballRadius = 0.0f;
-  }
-  */
-  
   //using parameterised constructor
   Ball(float x, float y, color c)
   {
@@ -41,6 +31,7 @@ class Ball
   {
     ySpeed += 0.8f;
     pos.y +=  ySpeed;
+    
   }
   
     
