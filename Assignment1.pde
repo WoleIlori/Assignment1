@@ -9,8 +9,7 @@ void setup()
   ballIndex = 0;
   check = 0;
   toggled = false;
-  animate = false;
-  pieError = 1;
+  bounceBall = false;
   border = width * 0.1f; 
   windowRange = width - (border * 2.0f);
   loadData();
@@ -28,7 +27,7 @@ ArrayList<Ball> balls = new ArrayList<Ball>();
 
 //global variables
 boolean toggled;
-boolean animate;
+boolean bounceBall;
 int pieError;
 int mode;
 float centX, centY; 
@@ -100,6 +99,7 @@ void draw()
   {
     case 0:
     {
+      //menu
        Ball option1 = new Ball(20, 40, color(240, 85, 7));
        Ball option2 = new Ball(20, 120, color(240, 85, 7));
        option1.ballSize = 15.0f;
@@ -109,16 +109,14 @@ void draw()
        fill(255);
        textSize(12);
        textAlign(LEFT);
-       text("1. Display the influence on international countries", 45, 47.5);
-       text("2. Display the countries and players currently playing", 40, 127.5);
+       text("Press 1 to display the influence on international countri", 45, 47.5);
+       text("Press 2 to Display the countries and players currently playing", 40, 127.5);
       break;
     }
     case 1:
     { 
-      if(pieError == 1)
-      {
         check = 1;
-        if(animate)
+        if(bounceBall)
         {
           //drawing the trendline graph
           drawAxis(11, 110);
@@ -127,20 +125,18 @@ void draw()
           for(int i = 0; i < data.size(); i ++)
           {
             balls.get(i).render();
-        
             if(i == ballIndex)
             {
-              balls.get(i).c = color(random(0,255));
+              balls.get(i).c = 255;
               balls.get(i).update();
            
               if((balls.get(i).pos.y + balls.get(i).ballRadius) > (height - border))
               {
                 balls.get(i).pos.y = ((height - border) - balls.get(i).ballRadius);
                 balls.get(i).ySpeed = - balls.get(i).ySpeed * 0.9f;
-                
               }
               
-              if((balls.get(i).pos.y < balls.get(i).ballRadius)  )
+              if((balls.get(i).pos.y < balls.get(i).ballRadius))
               {
                 balls.get(i).ySpeed = - balls.get(i).ySpeed ;
               }
@@ -149,13 +145,10 @@ void draw()
             else
             {
               balls.get(i).c = color (240, 85, 7) ;
-              
+              balls.get(i).pos.y = balls.get(i).prevPos;
             }
-
             
-            
-          }//end for
-          
+          }//end for 
         }
         else
         {
@@ -172,11 +165,9 @@ void draw()
             balls.add(ball);
             balls.get(i).render();
           }
-          balls.get(ballIndex).pos.y = map(data.get(ballIndex).noPlayer, 0, 110, height - border, (height - border) - windowRange);
+          balls.get(ballIndex).pos.y = balls.get(ballIndex).prevPos;
           
         }//end else
-        
-      }//end 
       break;
     }
     
@@ -185,13 +176,8 @@ void draw()
       check = 2;
       if(toggled)
       {
-         println("Yoohooooo");
-         
          //displays the names of players from the chosen country
-         displayPlayer(storeIndex);
-         
-         //prevents the user from going to case 1 from displayPlayer()
-         pieError = 0;
+         displayPlayer(storeIndex); 
       }
       else
       {
@@ -200,11 +186,9 @@ void draw()
         
         //call drawPieChart()
         drawPieChart(sum, maxIndex);
-        pieError = 1;
       }
       break;  
     }
-    
   }//end switch
   
 }//end draw()
@@ -228,12 +212,11 @@ void drawAxis(int verticalIntervals, float vertDataRange)
   stroke(200, 200, 200);
   fill(200, 200, 200);  
   
-  // Draw the horizontal azis  
-  line((border - 13), height - border, width - border, height - border);
-  
   float horizInterval =  windowRange / (data.size() - 1);
   float tickSize = border * 0.1f;
-  
+
+  // Draw the horizontal azis  
+  line((border - 13), height - border, width - border, height - border);
     
   for (int i = 0 ; i < data.size() ; i ++)
   {   
@@ -253,6 +236,7 @@ void drawAxis(int verticalIntervals, float vertDataRange)
   float verticalDataGap = vertDataRange / verticalIntervals;
   float verticalWindowRange = height - (border * 2.0f);
   float verticalWindowGap = verticalWindowRange / verticalIntervals; 
+  
   for (int i = 0 ; i <= verticalIntervals ; i ++)
   {
     float axisY = (height - border) - (i * verticalWindowGap);
@@ -343,28 +327,23 @@ void mousePressed()
   {
     for(int i = 0; i < data.size(); i++)
     {
-      
       if(dist(mouseX, mouseY, balls.get(i).pos.x, balls.get(i).pos.y) < balls.get(i).ballRadius)
       {
         ballIndex = i;
-        animate = ! animate;
-        
+        bounceBall = ! bounceBall;
       }
-      
     }//end for
   }
-        
+  
   if(check == 2)
   {
-    
     // Calculating the sum
     float sum = 0.0f;
     for(int i = 0; i < countries.size(); i++)
     {
       sum += countries.get(i).noPlayers;
     }
-    
-    
+   
     // Calculate the angle to the mouse
     float radius = centX ;
     float toMouseX = mouseX - radius;
@@ -396,18 +375,21 @@ void mousePressed()
     }//end for
     
   }//end if
-  
 }
 
 void keyPressed()
 {
-  if (key >= '0' && key <='2')
+  if(toggled == false)
   {
-    mode = key - '0';
+    if (key >= '0' && key <='2')
+    {
+      mode = key - '0';
+    }
+    println(mode);
   }
-  println(mode);
+    
 }
 
 
 
-    
+   
