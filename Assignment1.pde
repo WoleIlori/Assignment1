@@ -16,7 +16,6 @@ void setup()
   loadData();
   sumPlayers();
   maxIndex();
-  //image(image, 0, 0, width, height);
 }
 
 //Declare Global Arraylists
@@ -402,7 +401,7 @@ void mousePressed()
 
 void keyPressed()
 {
-  
+  //if the boolean is true options cannot be changed
   if(toggled == false)
   {
     if (key >= '0' && key <='2')
