@@ -5,3 +5,13 @@ My project is based on the influence basketball in the United States (NBA) has h
 ![menu_screenshot](https://cloud.githubusercontent.com/assets/15613250/11660094/55671ee6-9dc3-11e5-916b-c73266a2d0a0.jpg)
 ![option1](https://cloud.githubusercontent.com/assets/15613250/11660092/55668ef4-9dc3-11e5-886a-f788a69b1529.jpg)
 
+When you run the program it displays a menu 
+
+Option1 displays a trend graph of the no pInternational players that have played or is playing in the NBA
+When one of the ball is clicked the ball bounces.Cool right?
+
+Option 2 displays a piechart of the countries
+if you click on a pie segment it displays players from that country currently playing
+
+
+
